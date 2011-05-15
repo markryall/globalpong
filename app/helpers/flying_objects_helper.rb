@@ -1,0 +1,2 @@
+module FlyingObjectsHelper
+end

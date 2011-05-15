@@ -1,0 +1,35 @@
+<h1>Listing flying_objects</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Created by</th>
+    <th>Start lat</th>
+    <th>Start lon</th>
+    <th>Aim lat</th>
+    <th>Aim lon</th>
+    <th>Speed</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @flying_objects.each do |flying_object| %>
+  <tr>
+    <td><%= flying_object.name %></td>
+    <td><%= flying_object.created_by %></td>
+    <td><%= flying_object.start_lat %></td>
+    <td><%= flying_object.start_lon %></td>
+    <td><%= flying_object.aim_lat %></td>
+    <td><%= flying_object.aim_lon %></td>
+    <td><%= flying_object.speed %></td>
+    <td><%= link_to 'Show', flying_object %></td>
+    <td><%= link_to 'Edit', edit_flying_object_path(flying_object) %></td>
+    <td><%= link_to 'Destroy', flying_object, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Flying object', new_flying_object_path %>

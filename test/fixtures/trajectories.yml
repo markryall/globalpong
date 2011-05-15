@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  flying_object_id: 1
+  created_by: MyString
+  start_lat: 1.5
+  start_lon: 1.5
+  aim_lat: 1.5
+  aim_lon: 1.5
+  speed: 1.5
+
+two:
+  flying_object_id: 1
+  created_by: MyString
+  start_lat: 1.5
+  start_lon: 1.5
+  aim_lat: 1.5
+  aim_lon: 1.5
+  speed: 1.5

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @flying_object.name %>
+</p>
+
+<p>
+  <b>Created by:</b>
+  <%= @flying_object.created_by %>
+</p>
+
+<p>
+  <b>Start lat:</b>
+  <%= @flying_object.start_lat %>
+</p>
+
+<p>
+  <b>Start lon:</b>
+  <%= @flying_object.start_lon %>
+</p>
+
+<p>
+  <b>Aim lat:</b>
+  <%= @flying_object.aim_lat %>
+</p>
+
+<p>
+  <b>Aim lon:</b>
+  <%= @flying_object.aim_lon %>
+</p>
+
+<p>
+  <b>Speed:</b>
+  <%= @flying_object.speed %>
+</p>
+
+
+<%= link_to 'Edit', edit_flying_object_path(@flying_object) %> |
+<%= link_to 'Back', flying_objects_path %>

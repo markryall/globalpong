@@ -1,0 +1,45 @@
+<%= form_for(@flying_object) do |f| %>
+  <% if @flying_object.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@flying_object.errors.count, "error") %> prohibited this flying_object from being saved:</h2>
+
+      <ul>
+      <% @flying_object.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :created_by %><br />
+    <%= f.text_field :created_by %>
+  </div>
+  <div class="field">
+    <%= f.label :start_lat %><br />
+    <%= f.text_field :start_lat %>
+  </div>
+  <div class="field">
+    <%= f.label :start_lon %><br />
+    <%= f.text_field :start_lon %>
+  </div>
+  <div class="field">
+    <%= f.label :aim_lat %><br />
+    <%= f.text_field :aim_lat %>
+  </div>
+  <div class="field">
+    <%= f.label :aim_lon %><br />
+    <%= f.text_field :aim_lon %>
+  </div>
+  <div class="field">
+    <%= f.label :speed %><br />
+    <%= f.text_field :speed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
