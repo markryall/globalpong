@@ -1,23 +1,19 @@
 class FlyingObjectsController < ApplicationController
-  # GET /flying_objects
-  # GET /flying_objects.xml
   def index
     @flying_objects = FlyingObject.all
 
     respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @flying_objects }
+      format.html
+      format.json  { render :json => @flying_objects }
     end
   end
 
-  # GET /flying_objects/1
-  # GET /flying_objects/1.xml
   def show
     @flying_object = FlyingObject.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @flying_object }
+      format.html
+      format.json  { render :json => @flying_objects }
     end
   end
 
