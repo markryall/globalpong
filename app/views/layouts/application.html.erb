@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Global Pong</title>
+  <title><%= @title || 'Global Pong' %></title>
   <%= csrf_meta_tag %>
+  <%= yield :head %>
 </head>
 <body>
 

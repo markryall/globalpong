@@ -1,3 +1,23 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "default" %>
+  <%= stylesheet_link_tag "main", :media => "screen and (min-device-width: 481px)" %>
+  <%= stylesheet_link_tag "mobile", :media => "screen and (max-device-width: 480px)" %>
+  <%= javascript_include_tag "http://www.google.com/jsapi?key=ABQIAAAA6xOQSzg1vY1kb3Oind4DWxS6wmucxyPyZRD4GEjyZVIp_7_-chSlNeLzwuQqUrNOQ-6zQjKiAhg7uA" %> 
+  <%= javascript_include_tag "ajaxlibs", "latlong", "maps" %> 
+<% end %>
+
+<div id="data"> 
+  <div id="creator">mark.ryall@gmail.com</div> 
+  <div id="startLat">-37.816307</div><div id="startLon">144.96402</div><div id="aimLat">59.90807</div><div id="aimLon">10.752912</div><div id="startTime">Sun Sep 13 01:55:27 UTC 2009</div><div id="speed">23.97</div> 
+</div> 
+<div id="content"> 
+  <div id="header"><h1>global pong</h1></div> 
+  <div id="map"></div> 
+  <div id="badge"> 
+   <h2>the one true ball</h2><p>This ball was created by <span class="info">mark.ryall@gmail.com</span> on <span class="info">Sun Sep 13 01:55:27 UTC 2009</span></p><p>It was launched from (<span class="info">-37.816307</span>,<span class="info">144.96402</span>) heading towards (<span class="info">59.90807</span>,<span class="info">10.752912</span>) at <span class="info">23.97</span> km/h</p><p>It is now located at (<span class="info" id="currentLat"></span>,<span class="info" id="currentLon"></span>)</p> 
+  </div> 
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <p>
