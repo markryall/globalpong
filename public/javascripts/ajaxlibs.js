@@ -1,2 +1,2 @@
-google.load("jquery", "1.6.1");
-google.load("maps", "3.x");
+google.load("jquery", "1.3.2");
+google.load("maps", "2.x");

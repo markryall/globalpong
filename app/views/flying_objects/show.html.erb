@@ -7,54 +7,24 @@
 <% end %>
 
 <div id="data"> 
-  <div id="creator">mark.ryall@gmail.com</div> 
-  <div id="startLat">-37.816307</div><div id="startLon">144.96402</div><div id="aimLat">59.90807</div><div id="aimLon">10.752912</div><div id="startTime">Sun Sep 13 01:55:27 UTC 2009</div><div id="speed">23.97</div> 
-</div> 
+  <div id="creator"><%= @flying_object.created_by %></div> 
+  <div id="startLat"><%= @flying_object.start_lat %></div>
+  <div id="startLon"><%= @flying_object.start_lon %></div>
+  <div id="aimLat"><%= @flying_object.aim_lat %></div>
+  <div id="aimLon"><%= @flying_object.aim_lon %></div>
+  <div id="startTime"><%= @flying_object.created_at %></div>
+  <div id="speed"><%= @flying_object.speed %></div> 
+</div>
 <div id="content"> 
   <div id="header"><h1>global pong</h1></div> 
   <div id="map"></div> 
   <div id="badge"> 
-   <h2>the one true ball</h2><p>This ball was created by <span class="info">mark.ryall@gmail.com</span> on <span class="info">Sun Sep 13 01:55:27 UTC 2009</span></p><p>It was launched from (<span class="info">-37.816307</span>,<span class="info">144.96402</span>) heading towards (<span class="info">59.90807</span>,<span class="info">10.752912</span>) at <span class="info">23.97</span> km/h</p><p>It is now located at (<span class="info" id="currentLat"></span>,<span class="info" id="currentLon"></span>)</p> 
+   <h2><%= @flying_object.name %></h2>
+
+   <p>This ball was created by <span class="info"><%= @flying_object.created_by %></span> on <span class="info"><%= @flying_object.created_at %></span></p>
+
+   <p>It was launched from (<span class="info"><%= @flying_object.start_lat %></span>,<span class="info"><%= @flying_object.start_lon %></span>) heading towards (<span class="info"><%= @flying_object.aim_lat %></span>,<span class="info"><%= @flying_object.aim_lon %></span>) at <span class="info"><%= @flying_object.speed %></span> km/h</p>
+
+   <p>It is now located at (<span class="info" id="currentLat"></span>,<span class="info" id="currentLon"></span>)</p> 
   </div> 
 </div>
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @flying_object.name %>
-</p>
-
-<p>
-  <b>Created by:</b>
-  <%= @flying_object.created_by %>
-</p>
-
-<p>
-  <b>Start lat:</b>
-  <%= @flying_object.start_lat %>
-</p>
-
-<p>
-  <b>Start lon:</b>
-  <%= @flying_object.start_lon %>
-</p>
-
-<p>
-  <b>Aim lat:</b>
-  <%= @flying_object.aim_lat %>
-</p>
-
-<p>
-  <b>Aim lon:</b>
-  <%= @flying_object.aim_lon %>
-</p>
-
-<p>
-  <b>Speed:</b>
-  <%= @flying_object.speed %>
-</p>
-
-
-<%= link_to 'Edit', edit_flying_object_path(@flying_object) %> |
-<%= link_to 'Back', flying_objects_path %>
